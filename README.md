@@ -26,8 +26,9 @@ This repository provides enhanced arXiv support for AMSRefs bibliography styles.
    \usepackage[alphabetic,abbrev,msc-links,backrefs]{amsrefs}  % alphabetic
    \usepackage[shortalphabetic,abbrev,msc-links,backrefs]{amsrefs}  % short alphabetic
    \usepackage[citation-order,abbrev,msc-links,backrefs]{amsrefs}  % citation-order
+   \usepackage[alphabetic,y2k,abbrev,msc-links,backrefs]{amsrefs}  % year style (must use with alphabetic)
    ```
 
 ## Example
 
-See `test.tex` for a working example. 
+See `test.tex` for an example of how to use the styles.

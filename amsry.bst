@@ -44,6 +44,7 @@ ENTRY
     editor       month        review       xid
     eprint       mrnumber     school       year
     howpublished note         series
+    archivePrefix primaryClass
   }
   { }
   { label }
@@ -479,10 +480,30 @@ FUNCTION {techreport} { book }
 
 FUNCTION {unpublished} { book }
 
-FUNCTION {misc} { book }
+FUNCTION {arxiv} {
+    start.entry
+    "author" author optional.name.field
+    "title" title format.title write.field
+    "date" assemble.date.field
 
-FUNCTION {default.type} { misc }
+    % Format eprint correctly
+    primaryClass empty$
+        { "eprint" "arXiv: " eprint * write.field }
+        { "eprint" "arXiv: " "\href{https://www.arxiv.org/abs/" * eprint * "}{" * eprint * "} [" * primaryClass * "]" * write.field}
+    if$
+    "url" url optional.field
+    fin.entry
+}
 
+FUNCTION {misc} { arxiv }
+
+FUNCTION {default.type}
+{
+  type$ "arxiv" =
+    { arxiv }
+    { misc }
+  if$
+}
 
 READ
 
