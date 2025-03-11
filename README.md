@@ -2,12 +2,17 @@
 
 This repository provides enhanced arXiv support for AMSRefs bibliography styles. It includes modified versions of the standard AMSRefs .bst files to properly handle arXiv references.
 
+## Preview
+
+![arXiv Reference Styles](arXiv-style-Reference.png)
+
 ## Modified Bibliography Styles
 
 - `amsra.bst` - Alphabetic style
 - `amsrn.bst` - Numeric style (default)
 - `amsrs.bst` - Short alphabetic style
 - `amsru.bst` - Citation-order style
+- `amsry.bst` - Year y2k style
 
 ## Usage
 
