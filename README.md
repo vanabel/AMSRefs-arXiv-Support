@@ -14,6 +14,9 @@ This repository provides enhanced arXiv support for AMSRefs bibliography styles.
 1. Copy the desired .bst file to your TeX project
 2. Use the appropriate style option in your document:
    ```latex
+   % Required for backrefs support
+   \usepackage[backref=page]{hyperref}
+   
    \usepackage[abbrev,msc-links,backrefs]{amsrefs}  % numeric (default)
    \usepackage[alphabetic,abbrev,msc-links,backrefs]{amsrefs}  % alphabetic
    \usepackage[shortalphabetic,abbrev,msc-links,backrefs]{amsrefs}  % short alphabetic
